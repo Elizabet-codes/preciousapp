@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'News Cycle', sans-serif;
+   
+    background: rgb(3, 41, 6);
+    color:rgb(248, 240, 240);
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+
+  
+}
+ul{
+    margin:auto;
+   
+}
+
+ul>li{
+   border:2px solid green;
+    margin:4px;
+   cursor: pointer;
+  
+    list-style: none;
+}
+
+li>div{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:4px;
+   position: relative;
+ 
+}
+
+.fas fa-flag{
+    font-size:1rem;
+    width:2px;
+    position:absolute;
+    top:-10px;
+    right:45px;
+}
+
+.check-btn{
+  padding:12px;
+  width:10rem;
+  font-family: 'News Cycle', sans-serif;
+ color:green;
+ font-weight:bold;
+cursor:pointer;
+transition:all .6s ease-in;
+}
+
+.check-btn:hover{
+    background-color: green;
+    color:white;
+    border:none;
+}
+
+.check-btn:active{
+  transform:scale(1.5);
+}
+
+.number{
+    font-size:8px;
+    display: block;
+  margin-right: 4px;
+}
+
+.draggable-list li.right .person-name{
+    color:green;
+    
+}
+
+.draggable-list li.wrong .person-name{
+    color:red;
+    
+}
+
+.draggable-list li.over .draggable {
+    background-color: rgb(81, 187, 81);
+   
+  }
+
+  .draggable {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    flex: 1;
+   
+  }
+
+
+  .images{
+      width:100%;
+      max-width:200px;
+      height:100px;
+      object-fit: cover;
+  }
