@@ -51,7 +51,7 @@ function createList() {
 }
 function dragStart() {
   dragStartIndex = +this.closest("li").getAttribute("data-index");
-  console.log(dragStartIndex);
+  
 }
 
 function dragEnter() {
@@ -84,13 +84,16 @@ function swapItems(fromIndex, toIndex) {
 // Check the order of list items
 function checkOrder() {
   listItems.forEach((listItem, index) => {
+     
     const personName = listItem.querySelector(".draggable").innerText.trim();
+    
 
-    if (personName !== headOfState[index]) {
-      listItem.classList.add("wrong");
+    if (personName !== headOfState[index].name) {
+        listItem.classList.add('wrong');
     } else {
       listItem.classList.remove("wrong");
-      listItem.classList.add("right");
+      listItem.classList.add('right');
+     
     }
   });
 }
